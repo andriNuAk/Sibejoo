@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="vortex.sibejoo.VideoServerActivity"
+    tools:showIn="@layout/activity_video_server">
+
+    <VideoView
+        android:id="@+id/videoView"
+        android:layout_width="match_parent"
+        android:layout_height="220dp" />
+
+    <TextView
+        android:id="@+id/txtStatusVideo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:text="Video tidak tersedia"
+        android:visibility="gone"
+        android:textColor="#fff"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/videoView"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/txtJudulVideo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="@color/colorPrimary"
+                android:textSize="20dp"
+                android:layout_marginBottom="10dp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtJudulVideo"
+                android:id="@+id/relCommentTotal"
+                android:layout_marginBottom="10dp">
+
+                <TextView
+                    android:id="@+id/txtSumComment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="TextView"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="10dp" />
+
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d6d6d6"
+                android:layout_below="@id/relCommentTotal"
+                android:id="@+id/sep2"/>
+
+
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relTitleForm"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/sep2">
+
+                    <TextView
+                        android:id="@+id/txtTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:text="Comments"
+                        android:textColor="@color/colorPrimary"
+                        android:layout_marginBottom="10dp"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/relComment"
+                        android:layout_below="@+id/txtTitle"
+                        android:orientation="horizontal">
+
+                        <com.rengwuxian.materialedittext.MaterialEditText
+                            android:id="@+id/inComment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:ems="10"
+                            android:hint="Tulis komentar"
+                            android:inputType="textPersonName"
+                            android:textSize="12dp" />
+
+                        <Button
+                            android:id="@+id/imageView4"
+                            android:layout_width="63dp"
+                            android:layout_height="30dp"
+                            android:layout_marginBottom="5dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:background="@drawable/button_green_pressed"
+                            android:text="Kirim"
+                            android:textColor="@color/white"
+                            android:textSize="12dp"
+                            android:textAllCaps="false"/>
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:background="#d6d6d6"
+                android:layout_below="@id/relTitleForm"
+                android:id="@+id/sep3"/>
+
+
+            <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/listComments"
+                android:layout_below="@+id/sep3"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+            </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+
+
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

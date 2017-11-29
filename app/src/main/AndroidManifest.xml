@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="vortex.sibejoo">
+
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.READ_PROFILE" />
+    <uses-permission android:name="android.permission.READ_CONTACTS" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".SplashScreen"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".LoginActivity" />
+        <activity
+            android:name=".BerandaActivity"
+            android:label="@string/title_activity_beranda"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ProfilActivity"
+            android:label="@string/title_activity_profil"
+            android:parentActivityName=".BerandaActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.BerandaActivity" />
+        </activity>
+        <activity
+            android:name=".MapelActivity"
+            android:label="@string/title_activity_mapel"
+            android:parentActivityName=".BerandaActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.BerandaActivity" />
+        </activity>
+        <activity
+            android:name=".MateriActivity"
+            android:label="@string/title_activity_materi"
+            android:parentActivityName=".MapelActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.MapelActivity" />
+        </activity>
+        <activity
+            android:name=".VideoActivity"
+            android:label="@string/title_activity_video"
+            android:parentActivityName=".MateriActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.MateriActivity" />
+        </activity>
+        <activity
+            android:name=".VideoServerActivity"
+            android:label="@string/title_activity_video_server"
+            android:parentActivityName=".MateriActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.MateriActivity" />
+        </activity>
+        <activity
+            android:name=".MataPelajaranActivity"
+            android:label="@string/title_activity_mata_pelajaran"
+            android:parentActivityName=".BerandaActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.BerandaActivity" />
+        </activity>
+        <activity
+            android:name=".BerandaFreeActivity"
+            android:label="@string/title_activity_beranda_free" />
+        <activity
+            android:name=".BabLearningLineActivity"
+            android:label="@string/title_activity_bab_learning_line"
+            android:parentActivityName=".BerandaFreeActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.BerandaFreeActivity" />
+        </activity>
+        <activity
+            android:name=".LearningLineActivity"
+            android:label="@string/title_activity_learning_line"
+            android:parentActivityName=".BabLearningLineActivity"
+            android:theme="@style/AppTheme.NoActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="vortex.sibejoo.BabLearningLineActivity" />
+        </activity>
+        <activity android:name=".LearningLineVideoActivity" />
+        <activity android:name=".LearningLineVideoYoutubeActivity" />
+        <activity android:name=".ModulActivity" />
+        <activity
+            android:name=".SoalActivity"
+            android:label="@string/title_activity_soal"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+    </application>
+
+</manifest>

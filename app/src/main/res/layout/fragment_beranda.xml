@@ -1,0 +1,394 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="vortex.sibejoo.BerandaFragment"
+    android:background="#ededed">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:id="@+id/scrlView">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextHome">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        android:layout_centerVertical="true"
+                        card_view:srcCompat="@drawable/ic_school_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Silahkan pilih jejang pendidikan untuk menampilkan video "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView5" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/cardRanking"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardTextHome"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/TextView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="20dp"
+                        android:text="Jenjang Pendidikan "/>
+
+                    <TableLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_below="@id/TextView"
+                        android:layout_marginTop="20dp">
+
+                        <TableRow
+                            android:id="@+id/row_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:clickable="true"
+                                android:gravity="center"
+                                android:textColor="#fff">
+
+                                <com.skyfishjy.library.RippleBackground
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rippleSD"
+                                    app:rb_color="#324161"
+                                    app:rb_radius="32dp"
+                                    app:rb_rippleAmount="4"
+                                    app:rb_duration="2000"
+                                    app:rb_scale="6"></com.skyfishjy.library.RippleBackground>
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imgSD"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/sd"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="#FFF"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginTop="20dp"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/txtSD"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgSD"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="SD"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="20dp"
+                                    android:layout_marginBottom="20dp"/>
+
+
+
+
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff">
+
+                                <com.skyfishjy.library.RippleBackground
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rippleSMP"
+                                    app:rb_color="#324161"
+                                    app:rb_radius="32dp"
+                                    app:rb_rippleAmount="4"
+                                    app:rb_duration="2000"
+                                    app:rb_scale="6"></com.skyfishjy.library.RippleBackground>
+
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imgSMP"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/smp"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="#FFF"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginTop="20dp"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/txtSMP"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgSMP"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="SMP"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="20dp"
+                                    android:layout_marginBottom="20dp"/>
+
+
+
+                            </RelativeLayout>
+
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginRight="2dp"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff">
+
+                                <com.skyfishjy.library.RippleBackground
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rippleSMA"
+                                    app:rb_color="#324161"
+                                    app:rb_radius="32dp"
+                                    app:rb_rippleAmount="4"
+                                    app:rb_duration="2000"
+                                    app:rb_scale="6"></com.skyfishjy.library.RippleBackground>
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imgSMA"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/sma"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="#FFF"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginTop="20dp"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/txtSMA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgSMA"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="SMA"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="20dp"
+                                    android:layout_marginBottom="20dp"/>
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff">
+
+                                <com.skyfishjy.library.RippleBackground
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rippleSMAIPA"
+                                    app:rb_color="#324161"
+                                    app:rb_radius="32dp"
+                                    app:rb_rippleAmount="4"
+                                    app:rb_duration="2000"
+                                    app:rb_scale="6"></com.skyfishjy.library.RippleBackground>
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imgSMAIPA"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/sma"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="#FFF"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginTop="20dp"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/txtSMAIPA"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgSMAIPA"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="SMA - IPA"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="20dp"
+                                    android:layout_marginBottom="20dp"/>
+                            </RelativeLayout>
+                        </TableRow>
+
+                        <TableRow
+                            android:id="@+id/row_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="2dp">
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+
+                                android:layout_weight="1"
+                                android:background="@color/colorPrimaryDark"
+                                android:gravity="center"
+                                android:textColor="#fff">
+
+                                <com.skyfishjy.library.RippleBackground
+                                    xmlns:android="http://schemas.android.com/apk/res/android"
+                                    xmlns:app="http://schemas.android.com/apk/res-auto"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:id="@+id/rippleSMAIPS"
+                                    app:rb_color="#324161"
+                                    app:rb_radius="32dp"
+                                    app:rb_rippleAmount="4"
+                                    app:rb_duration="2000"
+                                    app:rb_scale="6"></com.skyfishjy.library.RippleBackground>
+
+                                <de.hdodenhof.circleimageview.CircleImageView
+                                    android:id="@+id/imgSMAIPS"
+                                    android:layout_width="75dp"
+                                    android:layout_height="75dp"
+                                    android:layout_centerHorizontal="true"
+                                    android:src="@drawable/sma"
+                                    android:scaleType="centerCrop"
+                                    app:civ_border_color="#FFF"
+                                    app:civ_border_width="1dp"
+                                    android:layout_marginTop="20dp"/>
+
+                                <TextView
+                                    android:layout_marginTop="5dp"
+                                    android:id="@+id/txtSMAIPS"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/imgSMAIPS"
+                                    android:layout_centerHorizontal="true"
+                                    android:text="SMA - IPS"
+                                    android:textColor="#e0e0e0"
+                                    android:textSize="20dp"
+                                    android:layout_marginBottom="20dp"/>
+                            </RelativeLayout>
+
+                            <!--<RelativeLayout-->
+                            <!--android:layout_width="match_parent"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_weight="1"-->
+                            <!--android:background="@color/colorPrimaryDark"-->
+                            <!--android:gravity="center"-->
+                            <!--android:textColor="#fff"-->
+                            <!--android:paddingBottom="20dp"-->
+                            <!--android:paddingTop="20dp">-->
+
+                            <!--<de.hdodenhof.circleimageview.CircleImageView-->
+                            <!--android:id="@+id/imgSMAIPA"-->
+                            <!--android:layout_width="75dp"-->
+                            <!--android:layout_height="75dp"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:src="@drawable/logo_sma"-->
+                            <!--android:scaleType="centerCrop"-->
+                            <!--app:civ_border_color="#FFF"-->
+                            <!--app:civ_border_width="1dp" />-->
+
+                            <!--<TextView-->
+                            <!--android:layout_marginTop="5dp"-->
+                            <!--android:id="@+id/txtSMAIPA"-->
+                            <!--android:layout_width="wrap_content"-->
+                            <!--android:layout_height="wrap_content"-->
+                            <!--android:layout_below="@+id/imgSMAIPA"-->
+                            <!--android:layout_centerHorizontal="true"-->
+                            <!--android:text="SMA - IPA"-->
+                            <!--android:textColor="#e0e0e0"-->
+                            <!--android:textSize="20dp" />-->
+                            <!--</RelativeLayout>-->
+                        </TableRow>
+
+                    </TableLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>

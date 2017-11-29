@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="Home" />
+        <item
+            android:id="@+id/nav_tryout"
+            android:icon="@drawable/ic_mode_edit_black_24dp"
+            android:title="Tryout" />
+        <item
+            android:id="@+id/nav_konsultasi"
+            android:icon="@drawable/ic_group_black_24dp"
+            android:title="Konsultasi" />
+        <item
+            android:id="@+id/nav_latihan"
+            android:icon="@drawable/ic_border_color_black_24dp"
+            android:title="Latihan" />
+    </group>
+
+    <item android:title="Learning Line">
+        <menu>
+            <item
+                android:id="@+id/nav_sd"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="SD" />
+            <item
+                android:id="@+id/nav_smp"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="SMP" />
+            <item
+                android:id="@+id/nav_sma"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="SMA" />
+            <item
+                android:id="@+id/nav_smaipa"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="SMA IPA" />
+            <item
+                android:id="@+id/nav_smaips"
+                android:icon="@drawable/ic_school_black_24dp"
+                android:title="SMA IPS" />
+        </menu>
+    </item>
+
+</menu>

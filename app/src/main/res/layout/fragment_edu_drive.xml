@@ -1,0 +1,195 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="vortex.sibejoo.EduDriveFragment"
+    android:background="#ededed">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:id="@+id/scrlView2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/txtCari"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:hint="Masukan judul file yang anda cari..."
+                android:background="@drawable/rounded_border_edittext_white"
+                android:padding="10dp"
+                android:textSize="12dp"/>
+
+            <HorizontalScrollView
+                android:id="@+id/layoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtCari"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SD"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSD"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMP"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMP"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMA"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA-IPA"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMAIPA"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA-IPS"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMAIPS"
+                        />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#fff"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/layoutButton"
+                android:id="@+id/cardLayoutRecomend">
+
+                <LinearLayout
+                    android:id="@+id/lineaRecomend"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtDownloadTeratas"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download Terlaris"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/recyclerRecomend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:orientation="horizontal" />
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_cyclic"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:minWidth="50dp"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#fff"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginTop="10dp"
+                android:layout_below="@id/cardLayoutRecomend"
+                android:id="@+id/cardLayoutEduDrive">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="10dp">
+
+                    <TextView
+                        android:id="@+id/txtDownloadEdu"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Download Modul"
+                        android:textSize="15dp"
+                        android:textColor="@color/colorPrimary"/>
+
+                    <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                        android:id="@+id/listEdu"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginTop="10dp"
+                        android:scrollbars="none"
+                        android:divider="@null"/>
+
+                    <ProgressBar
+                        android:id="@+id/progressBar_cyclic2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="50dp"
+                        android:minWidth="50dp"/>
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+</RelativeLayout>

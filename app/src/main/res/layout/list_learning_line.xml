@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    android:id="@+id/relStepLearningLine">
+
+    <ImageView
+        android:id="@+id/imageView27"
+        android:layout_width="20dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:scaleType="fitXY"
+        android:src="@drawable/road" />
+
+    <ImageView
+        android:id="@+id/imageView28"
+        android:layout_width="20dp"
+        android:layout_height="60dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/road" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/circleImageStep"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/bahasa" />
+
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imgStatStep"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:srcCompat="@drawable/ic_lock_black_24dp"
+        android:tint="#C0CA33"
+        android:layout_below="@id/circleImageStep"
+        android:layout_marginTop="-25dp"
+        android:layout_alignStart="@id/circleImageStep" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#ededed"
+        android:orientation="vertical"
+        card_view:cardBackgroundColor="#00796B"
+        card_view:cardCornerRadius="2dp"
+        card_view:cardElevation="4dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/circleImageStep"
+        android:id="@+id/cardStep"
+        >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hello"
+            android:textColor="@color/white"
+            android:textSize="16dp"
+            android:id="@+id/txtNamaStep"
+            android:paddingBottom="3dp"
+            android:paddingTop="3dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"/>
+
+    </android.support.v7.widget.CardView>
+
+
+
+</RelativeLayout>

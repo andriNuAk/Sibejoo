@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    card_view:cardBackgroundColor="#202C45"
+    card_view:cardCornerRadius="5dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginBottom="10dp"
+    card_view:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingRight="10dp">
+
+        <ImageView
+            android:id="@+id/imageView18"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_margin="10dp"
+            app:srcCompat="@drawable/ic_picture_as_pdf_black_24dp"
+            android:tint="@color/white"/>
+
+        <TextView
+            android:id="@+id/txtJudulModul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_toRightOf="@id/imageView18"
+            android:layout_marginTop="10dp"
+            android:textSize="15dp"
+            android:textColor="@color/colorTeal" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtDeskripsiModul"
+            android:layout_toRightOf="@id/imageView18"
+            android:layout_below="@id/txtJudulModul"
+            android:text="Test"
+            android:textSize="12dp"
+            android:textColor="#fff"/>
+
+        <Button
+            android:id="@+id/btnDownloadModul"
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:text="Button"
+            android:layout_below="@id/imageView18"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/button_green_pressed"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="10dp"
+            android:layout_marginBottom="10dp"/>
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

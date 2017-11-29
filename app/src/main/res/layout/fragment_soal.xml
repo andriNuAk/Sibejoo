@@ -1,0 +1,173 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    tools:context="vortex.sibejoo.SoalActivity$PlaceholderFragment"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/relSoal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <TextView
+                    android:id="@+id/txtNoSoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="1."
+                    android:textColor="#000"
+                    android:textSize="15dp" />
+
+                <ImageView
+                    android:id="@+id/imgSoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/si_ocong"
+                    android:layout_toRightOf="@id/txtNoSoal"/>
+
+                <TextView
+                    android:id="@+id/txtSoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/txtNoSoal"
+                    android:text="TextView"
+                    android:textColor="#000"
+                    android:textSize="15dp"
+                    android:layout_below="@id/imgSoal"
+                    android:layout_marginTop="10dp"/>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/relJawaban"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/btnA"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_grey_pressed"
+                        android:text="Button"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"/>
+
+                    <Button
+                        android:id="@+id/btnB"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_grey_pressed"
+                        android:text="Button"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"/>
+
+                    <Button
+                        android:id="@+id/btnC"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_grey_pressed"
+                        android:text="Button"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"/>
+
+                    <Button
+                        android:id="@+id/btnD"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_grey_pressed"
+                        android:text="Button"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"/>
+
+                    <Button
+                        android:id="@+id/btnE"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:background="@drawable/button_grey_pressed"
+                        android:text="Button"
+                        android:textColor="@color/white"
+                        android:textAllCaps="false"
+                        android:textAlignment="textStart"
+                        android:paddingLeft="12.5dp"
+                        android:paddingRight="12.5dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentBottom="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:id="@+id/btnPrev"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Kembali"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_pink_pressed"
+                        android:textColor="@color/white"
+                        android:layout_marginRight="2.5dp"/>
+
+                    <Button
+                        android:id="@+id/btnNext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Lanjut"
+                        android:textAllCaps="false"
+                        android:background="@drawable/button_blue_pressed"
+                        android:textColor="@color/white"
+                        android:layout_marginLeft="2.5dp"/>
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

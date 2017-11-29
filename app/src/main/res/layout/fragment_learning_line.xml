@@ -1,0 +1,184 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    tools:context="vortex.sibejoo.LearningLineFragment"
+    android:background="#ededed">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextLearningLine">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <TextView
+                        android:id="@+id/txtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Pilih jenis tingkat untuk menampilkan mata pelajaran "
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView20" />
+
+                    <ImageView
+                        android:id="@+id/imageView20"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        card_view:srcCompat="@drawable/ic_school_black_24dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <HorizontalScrollView
+                android:id="@+id/layoutButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/cardTextLearningLine"
+                android:layout_marginTop="10dp"
+                android:scrollbars="none"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SD"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSD"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMP"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMP"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMA"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA-IPA"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMAIPA"/>
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="28dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/button_green_pressed"
+                        android:text="SMA-IPS"
+                        android:textColor="@color/white"
+                        android:textSize="12dp"
+                        android:id="@+id/btnSMAIPS"
+                        />
+
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/layoutButton"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:layout_marginTop="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/relNull">
+
+
+                    <ImageView
+                        android:id="@+id/imageView29"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"
+                        card_view:srcCompat="@drawable/ic_mood_bad_black_24dp"
+                        android:tint="#969696" />
+
+                    <TextView
+                        android:id="@+id/textView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/imageView29"
+                        android:text="Ooopss, materi belum tersedia !!!"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:textSize="15dp"
+                        android:textColor="#969696"/>
+
+
+                </RelativeLayout>
+
+                <com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/listMapelLearningLine"
+                    android:padding="10dp"
+                    android:divider="@null"
+                    android:scrollbars="none">
+
+                </com.github.paolorotolo.expandableheightlistview.ExpandableHeightListView>
+
+            </android.support.v7.widget.CardView>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

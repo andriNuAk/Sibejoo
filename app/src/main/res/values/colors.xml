@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#202C45 </color>
+    <color name="colorPrimaryDark">#192745</color>
+    <color name="colorAccent">#FF4081</color>
+
+    <color name="colorPink">#f2184f</color>
+    <color name="colorPinkPressed">#c51340</color>
+    
+    <color name="colorTeal">#009688</color>
+    <color name="colorTealPressed">#00796B</color>
+    <color name="white">#ffffff</color>
+
+    <color name="dialog_background">#247195</color>
+    <color name="dialog_button">#ededed</color>
+    <color name="dialog_title">#d6d6d6</color>
+</resources>

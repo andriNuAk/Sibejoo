@@ -1,0 +1,25 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/action_settings"
+        android:icon="@drawable/ic_more_vert_black_24dp"
+        android:title="more"
+        android:orderInCategory="100"
+        app:showAsAction="always">
+        <menu>
+            <item
+                android:id="@+id/profil"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="profil"
+                app:showAsAction="never" />
+            <item
+                android:id="@+id/logout"
+                android:orderInCategory="100"
+                android:icon="@drawable/ic_power_settings_new_black_24dp"
+                android:title="logout"
+                app:showAsAction="never" />
+        </menu>
+    </item>
+
+</menu>

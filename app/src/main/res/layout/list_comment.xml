@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ededed"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/relSay"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/txtSay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/relSay"
+        android:background="#ededed"
+        android:padding="10dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/si_ocong"
+            android:layout_centerVertical="true"
+            android:id="@+id/imgProfilComment"/>
+
+        <LinearLayout
+            android:id="@+id/lineBlockquote"
+            android:layout_width="wrap_content"
+            android:layout_height="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginBottom="10dp"
+            android:layout_toRightOf="@+id/imgProfilComment"
+            android:background="#ededed"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/sep3"
+                android:layout_width="5dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/relComment"
+                android:layout_marginRight="10dp"
+                android:background="@color/colorPrimary" />
+
+            <TextView
+                android:id="@+id/txtBlockquote"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:textColor="#5c5c5c"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:layout_below="@+id/lineBlockquote"
+            android:layout_toRightOf="@+id/imgProfilComment"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/txtComment"
+            android:textColor="#5c5c5c"/>
+
+        <TextView
+            android:id="@+id/txtPubDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txtComment"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/imgProfilComment"
+            android:text="Pub Date"
+            android:textSize="10dp"
+            android:textColor="#5c5c5c"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="TextView"
+            android:id="@+id/txtAuthor"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/txtComment"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/colorPrimary"/>
+
+    </RelativeLayout>
+</RelativeLayout>

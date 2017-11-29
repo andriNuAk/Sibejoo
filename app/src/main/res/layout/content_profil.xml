@@ -1,0 +1,917 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="vortex.sibejoo.ProfilActivity"
+    tools:showIn="@layout/activity_profil"
+    android:background="#ededed">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foreground="#95000000"
+                android:id="@+id/frameLayout">
+
+                <ImageView
+                    android:id="@+id/imgProfil"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    android:scaleType="centerCrop"
+                    app:srcCompat="@drawable/si_ocong" />
+
+            </FrameLayout>
+
+            <ImageButton
+                android:id="@+id/btnPhoto"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_below="@+id/frameLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-35dp"
+                android:background="@drawable/button_circle_pink_pressed"
+                app:srcCompat="@drawable/ic_photo_camera_white_50dp" />
+
+            <TextView
+                android:id="@+id/txtNamaLengkap"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/btnPhoto"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="75dp"
+                android:text="TextView"
+                android:textSize="20dp"
+                android:textColor="#fff"/>
+
+            <TextView
+                android:id="@+id/txtSekolah"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="TextView"
+                android:layout_below="@+id/txtNamaLengkap"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="-65dp"
+                android:textSize="13dp"
+                android:textColor="#fff"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextProfil"
+                android:layout_below="@+id/btnPhoto"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/txtText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView10"
+                        android:text="Profil"
+                        android:textColor="@color/colorPrimaryDark" />
+
+                    <ImageView
+                        android:id="@+id/imageView10"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        card_view:srcCompat="@drawable/ic_person_black_24dp" />
+
+                    <ImageView
+                        android:id="@+id/imgDown1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/txtText"
+                        android:tint="@color/colorPink"
+                        card_view:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/lvProfil"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardTextProfil"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="10dp"
+                >
+
+                <!--edit view nama depan-->
+                <RelativeLayout
+                    android:id="@+id/relNamaDepan"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp">
+
+
+                    <ImageView
+                        android:id="@+id/imageView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_account_box_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relNamaDepan"
+                    android:layout_toEndOf="@+id/relNamaDepan"
+                    android:layout_toRightOf="@+id/relNamaDepan"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:id="@+id/txtLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil"
+                        android:layout_toRightOf="@+id/iconProfil"
+                        android:layout_weight="1"
+                        android:text="Nama Depan"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueNamaDepan"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil"
+                        android:layout_toRightOf="@+id/iconProfil"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--edit view nama belakang-->
+                <RelativeLayout
+                    android:id="@+id/relNamaBelakang"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relNamaDepan">
+
+                    <ImageView
+                        android:id="@+id/iconProfil2"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:layout_centerHorizontal="true"
+                        android:layout_centerVertical="true"/>
+
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relNamaBelakang"
+                    android:layout_toEndOf="@+id/relNamaBelakang"
+                    android:layout_toRightOf="@+id/relNamaBelakang"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil2"
+                        android:layout_toRightOf="@+id/iconProfil2"
+                        android:layout_weight="1"
+                        android:text="Nama Belakang"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueNamaBelakang"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil2"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil2"
+                        android:layout_toRightOf="@+id/iconProfil2"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--Edit view alamat-->
+                <RelativeLayout
+                    android:id="@+id/relAlamat"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relNamaBelakang"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_location_on_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relAlamat"
+                    android:layout_toEndOf="@+id/relAlamat"
+                    android:layout_toRightOf="@+id/relAlamat"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil3"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil3"
+                        android:layout_toRightOf="@+id/iconProfil3"
+                        android:layout_weight="1"
+                        android:text="Alamat"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueAlamat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil3"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil3"
+                        android:layout_toRightOf="@+id/iconProfil3"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--Edit view no kontak-->
+                <RelativeLayout
+                    android:id="@+id/relNoKontak"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relAlamat"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_phone_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relNoKontak"
+                    android:layout_toEndOf="@+id/relNoKontak"
+                    android:layout_toRightOf="@+id/relNoKontak"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil4"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil4"
+                        android:layout_toRightOf="@+id/iconProfil4"
+                        android:layout_weight="1"
+                        android:text="No Kontak"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueNoKontak"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil4"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil4"
+                        android:layout_toRightOf="@+id/iconProfil4"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--Edit view biografi-->
+                <RelativeLayout
+                    android:id="@+id/relBiografi"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relNoKontak"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_border_color_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relBiografi"
+                    android:layout_toEndOf="@+id/relBiografi"
+                    android:layout_toRightOf="@+id/relBiografi"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil5"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil5"
+                        android:layout_toRightOf="@+id/iconProfil5"
+                        android:layout_weight="1"
+                        android:text="Biografi"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueBiografi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil5"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil5"
+                        android:layout_toRightOf="@+id/iconProfil5"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--Edit view nama sekolah-->
+                <RelativeLayout
+                    android:id="@+id/relNamaSekolah"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relBiografi"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_school_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relNamaSekolah"
+                    android:layout_toEndOf="@+id/relNamaSekolah"
+                    android:layout_toRightOf="@+id/relNamaSekolah"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil6"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil6"
+                        android:layout_toRightOf="@+id/iconProfil6"
+                        android:layout_weight="1"
+                        android:text="Nama Sekolah"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueNamaSekolah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil6"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil6"
+                        android:layout_toRightOf="@+id/iconProfil6"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+                <!--Edit view alamat sekolah-->
+                <RelativeLayout
+                    android:id="@+id/relAlamatSekolah"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relNamaSekolah"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView16"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_location_on_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relAlamatSekolah"
+                    android:layout_toEndOf="@+id/relAlamatSekolah"
+                    android:layout_toRightOf="@+id/relAlamatSekolah"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil7"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil7"
+                        android:layout_toRightOf="@+id/iconProfil7"
+                        android:layout_weight="1"
+                        android:text="Alamat Sekolah"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueAlamatSekolah"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil7"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil7"
+                        android:layout_toRightOf="@+id/iconProfil7"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp" />
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lvProfil"
+                android:id="@+id/btnUbahProfil"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Simpan Perubahan"
+                android:background="@drawable/button_edit"
+                android:textColor="@color/white"
+                android:enabled="false"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextEmail"
+                android:layout_below="@+id/btnUbahProfil"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView24"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        card_view:srcCompat="@drawable/ic_email_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txtTextEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Email"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView24" />
+
+                    <ImageView
+                        android:id="@+id/imgDown2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/txtTextEmail"
+                        android:tint="@color/colorPink"
+                        card_view:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/lvEmail"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardTextEmail"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="10dp"
+                >
+
+                <!--Edit view email-->
+                <RelativeLayout
+                    android:id="@+id/relEmail"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView19"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_email_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relEmail"
+                    android:layout_toEndOf="@+id/relEmail"
+                    android:layout_toRightOf="@+id/relEmail"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil8"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil8"
+                        android:layout_toRightOf="@+id/iconProfil8"
+                        android:layout_weight="1"
+                        android:text="Email"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueEmail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil8"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil8"
+                        android:layout_toRightOf="@+id/iconProfil8"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp"
+                        android:hint="Masukan email baru"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lvEmail"
+                android:id="@+id/btnUbahEmail"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Simpan Perubahan"
+                android:background="@drawable/button_edit"
+                android:textColor="@color/white"
+                android:enabled="false"/>
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="#ededed"
+                android:orientation="vertical"
+                card_view:cardBackgroundColor="#d6d6d6"
+                card_view:cardCornerRadius="5dp"
+                android:id="@+id/cardTextPassword"
+                android:layout_below="@+id/btnUbahEmail"
+                android:layout_marginBottom="10dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp">
+
+                    <ImageView
+                        android:id="@+id/imageView25"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:tint="@color/colorPrimary"
+                        card_view:srcCompat="@drawable/ic_vpn_key_black_24dp" />
+
+                    <TextView
+                        android:id="@+id/txtTextPassword"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Password"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:layout_centerVertical="true"
+                        android:layout_toEndOf="@+id/imageView25" />
+                    <ImageView
+                        android:id="@+id/imgDown3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_alignTop="@+id/txtTextPassword"
+                        android:tint="@color/colorPink"
+                        card_view:srcCompat="@drawable/ic_keyboard_arrow_down_black_24dp" />
+
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <RelativeLayout
+                android:id="@+id/lvPassword"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/cardTextPassword"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:scrollbars="none"
+                android:layout_marginBottom="20dp"
+                >
+
+                <!--Edit view password lama-->
+                <RelativeLayout
+                    android:id="@+id/relPasswordLama"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_vpn_key_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relPasswordLama"
+                    android:layout_toEndOf="@+id/relPasswordLama"
+                    android:layout_toRightOf="@+id/relPasswordLama"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil9"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil9"
+                        android:layout_toRightOf="@+id/iconProfil9"
+                        android:layout_weight="1"
+                        android:text="Masukan Password Lama"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValuePassLama"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil9"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil9"
+                        android:layout_toRightOf="@+id/iconProfil9"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp"
+                        android:hint="Masukan password lama"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+
+                <!--Edit view password baru-->
+                <RelativeLayout
+                    android:id="@+id/relPasswordBaru"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relPasswordLama"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView22"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_vpn_key_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relPasswordBaru"
+                    android:layout_toEndOf="@+id/relPasswordBaru"
+                    android:layout_toRightOf="@+id/relPasswordBaru"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil10"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil10"
+                        android:layout_toRightOf="@+id/iconProfil10"
+                        android:layout_weight="1"
+                        android:text="Masukan Password Baru"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValuePassBaru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil10"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil10"
+                        android:layout_toRightOf="@+id/iconProfil10"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp"
+                        android:hint="Masukan password baru"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+
+                <!--Edit view con password naru-->
+                <RelativeLayout
+                    android:id="@+id/relConPasswordBaru"
+                    android:layout_width="35dp"
+                    android:layout_height="45dp"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_below="@+id/relPasswordBaru"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imageView23"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        card_view:srcCompat="@drawable/ic_vpn_key_black_24dp" />
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relConPasswordBaru"
+                    android:layout_toEndOf="@+id/relConPasswordBaru"
+                    android:layout_toRightOf="@+id/relConPasswordBaru"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil11"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil11"
+                        android:layout_toRightOf="@+id/iconProfil11"
+                        android:layout_weight="1"
+                        android:text="Ulangi Password Baru"
+                        android:textColor="#212121"
+                        android:textSize="12dp" />
+
+                    <EditText
+                        android:id="@+id/txtValueConPassBaru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/iconProfil11"
+                        android:layout_marginBottom="5dp"
+                        android:layout_toEndOf="@+id/iconProfil11"
+                        android:layout_toRightOf="@+id/iconProfil11"
+                        android:autoLink="web"
+                        android:linksClickable="true"
+                        android:textColor="#757575"
+                        android:textColorLink="#00BCD4"
+                        android:textSize="12dp"
+                        android:hint="Ulangi password baru"
+                        android:inputType="textPassword"/>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/lvPassword"
+                android:id="@+id/btnUbahPassword"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:text="Simpan Perubahan"
+                android:background="@drawable/button_edit"
+                android:textColor="@color/white"
+                android:layout_marginBottom="10dp"
+                android:enabled="false"/>
+
+        </RelativeLayout>
+    </ScrollView>
+
+
+
+</RelativeLayout>
